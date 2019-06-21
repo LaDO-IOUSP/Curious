@@ -2,7 +2,7 @@ run: conda-packages, OceanLab, dedalus
 
 # make conda-packages
 conda-packages:
-	yes | conda install -c conda-forge pandas	
+	yes | conda install -c conda-forge pandas
 	yes | conda install -c conda-forge seawater
 	yes | conda install -c conda-forge gsw
 	yes | conda install -c conda-forge netcdf4
@@ -15,18 +15,18 @@ conda-packages:
 # make OceaLab AT=<installation directory>
 OceanLab:
 	# choose installation path
-	@echo dedalus installation at $(AT)
+	@echo OceanLab installation at $(AT)
 	if [ ! -d $$AT ]; then mkdir $$AT; fi
 	git clone https://github.com/iuryt/OceanLab.git $$AT
-	python $$AT/setup.py install
+	cd $$AT && python setup.py install
 
 # make dedalus AT=<installation directory>
-dedalus:	
+dedalus:
 	yes | conda install -n base -c conda-forge mpi
 	yes | conda install -n base -c conda-forge mpi4py
 	yes | conda install -n base -c conda-forge openmpi
 	yes | conda install -n base -c conda-forge fftw
-	yes | conda install -n base -c conda-forge hdf5	
+	yes | conda install -n base -c conda-forge hdf5
 	# choose installation path
 	@echo dedalus installation at $(AT)
 	if [ ! -d $$AT ]; then mkdir $$AT; fi
