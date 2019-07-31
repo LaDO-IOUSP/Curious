@@ -11,6 +11,7 @@ conda-packages:
 	yes | conda install -c conda-forge basemap-data-hires
 	yes | conda install -c conda-forge basemap
 	yes | conda install -c conda-forge cmocean
+	yes | conda install -c conda-forge seaborn
 
 # make OceaLab AT=<installation directory>
 OceanLab:
@@ -39,4 +40,4 @@ dedalus:
 	yes | conda install -n dedalus -c anaconda ipython
 	yes | conda install -n dedalus -c conda-forge seawater
 	yes | conda install -n dedalus -c conda-forge pandas
-
+	yes | conda install -n dedalus -c conda-forge seaborn
