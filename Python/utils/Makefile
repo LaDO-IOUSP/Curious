@@ -6,12 +6,14 @@ conda-packages:
 	yes | conda install -c conda-forge seawater
 	yes | conda install -c conda-forge gsw
 	yes | conda install -c conda-forge netcdf4
-	yes | conda install -c conda-forge pyproj
-	yes | conda install -c conda-forge proj4
-	yes | conda install -c conda-forge basemap-data-hires
-	yes | conda install -c conda-forge basemap
-	yes | conda install -c conda-forge cmocean
-	yes | conda install -c conda-forge seaborn
+	yes | conda install -c conda-forge cartopy
+
+	# yes | conda install -c conda-forge pyproj
+	# yes | conda install -c conda-forge proj4
+	# yes | conda install -c conda-forge basemap-data-hires
+	# yes | conda install -c conda-forge basemap
+	# yes | conda install -c conda-forge cmocean
+	# yes | conda install -c conda-forge seaborn
 
 # make OceaLab AT=<installation directory>
 OceanLab:
