@@ -44,10 +44,4 @@ dedalus:
 
 # make parcels ENV=<env_name>
 parcels:
-	conda activate root
 	yes | conda create -n $$ENV -c conda-forge python=3.6 parcels jupyter cartopy ffmpeg
-
-# make parcels AT=<installation directory> ENV=<env_name>
-parcels_examples:
-	conda activate $$ENV
-	parcels_get_examples $$AT/parcels_examples
