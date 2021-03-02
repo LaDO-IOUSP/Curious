@@ -43,3 +43,7 @@ dedalus:
 	yes | conda install -n dedalus -c conda-forge seawater
 	yes | conda install -n dedalus -c conda-forge pandas
 	yes | conda install -n dedalus -c conda-forge seaborn
+
+# make parcels ENV=<env_name>
+parcels:
+	yes | conda create -n $$ENV -c conda-forge python=3.6 parcels jupyter cartopy ffmpeg
