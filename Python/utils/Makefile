@@ -1,4 +1,4 @@
-run: conda-packages, OceanLab, dedalus
+run: conda-packages, OceanLab, dedalus, parcels
 
 # make conda-packages
 conda-packages:
@@ -15,13 +15,15 @@ conda-packages:
 	# yes | conda install -c conda-forge cmocean
 	# yes | conda install -c conda-forge seaborn
 
-# make OceaLab AT=<installation directory>
+# new OceanLab version with pip
 OceanLab:
+	pip install OceanLab
+	# make OceaLab AT=<installation directory>
 	# choose installation path
-	@echo OceanLab installation at $(AT)
-	if [ ! -d $$AT ]; then mkdir $$AT; fi
-	git clone https://github.com/iuryt/OceanLab.git $$AT
-	cd $$AT && python setup.py install
+	#@echo OceanLab installation at $(AT)
+	#if [ ! -d $$AT ]; then mkdir $$AT; fi
+	#git clone https://github.com/iuryt/OceanLab.git $$AT
+	#cd $$AT && python setup.py install
 
 # make dedalus AT=<installation directory>
 dedalus:
