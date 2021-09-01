@@ -3,9 +3,10 @@ run: conda-packages, OceanLab, dedalus, parcels
 # make conda-packages
 conda-packages:
 	yes | conda install -c conda-forge pandas
+	yes | conda install -c conda-forge netcdf4
+	yes | conda install -c conda-forge xarray
 	yes | conda install -c conda-forge seawater
 	yes | conda install -c conda-forge gsw
-	yes | conda install -c conda-forge netcdf4
 	yes | conda install -c conda-forge cartopy
 
 	# yes | conda install -c conda-forge pyproj
@@ -43,8 +44,7 @@ dedalus:
 	reset
 	yes | conda install -n dedalus -c anaconda ipython
 	yes | conda install -n dedalus -c conda-forge seawater
-	yes | conda install -n dedalus -c conda-forge pandas
-	yes | conda install -n dedalus -c conda-forge seaborn
+	yes | conda install -n dedalus -c conda-forge xarray
 
 # make parcels ENV=<env_name>
 parcels:
