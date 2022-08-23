@@ -2,12 +2,17 @@ run: conda-packages, OceanLab, dedalus, parcels
 
 # make conda-packages
 conda-packages:
+	# data processing
 	yes | conda install -c conda-forge pandas
 	yes | conda install -c conda-forge netcdf4
 	yes | conda install -c conda-forge xarray
+	# oceanography
 	yes | conda install -c conda-forge seawater
 	yes | conda install -c conda-forge gsw
 	yes | conda install -c conda-forge cartopy
+	# colormaps
+	yes | conda install -c conda-forge cmocean	
+	yes | conda install -c conda-forge cmcrameri
 
 	# yes | conda install -c conda-forge pyproj
 	# yes | conda install -c conda-forge proj4
